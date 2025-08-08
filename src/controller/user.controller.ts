@@ -9,6 +9,7 @@ export const createUserHandler = async (
 ) => {
   try {
     const user = await createUser(req.body); // needs to omit createdAt & updateAt, passCnfrm, cmpPassword
+    logger.info(`POST /api/users - ${user.name}'s account created.`);
     return res.status(201).json({
       message: "User created successfully",
       user: {
