@@ -4,6 +4,9 @@ import connect from "./utils/connect.js";
 import logger from "./utils/logger.js";
 import routes from "./routes.js";
 import { deserializeUser } from "./middleware/deserializeUser.js";
+import dotenv from "dotenv";
+
+
 
 const port = config.get<number>("port") || 5000;
 const app = express();

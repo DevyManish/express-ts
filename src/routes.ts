@@ -17,7 +17,7 @@ const routes = (app: Express) => {
   app.get("/api/sessions", requireUser, getUserSessionHandler);
   app.delete("/api/sessions", requireUser, deleteSessionHandler);
 
-  app.post("/api/products", validate(createProductSchema), ()=> console.log("create product hit "), createProductHandler);
+  app.post("/api/products", validate(createProductSchema), createProductHandler);
   app.get("/api/products", requireUser, getProductHandler);
   app.put("/api/products", requireUser, updateProductHandler);
   app.delete("/api/products", requireUser, deleteProductHandler);

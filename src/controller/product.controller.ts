@@ -14,17 +14,17 @@ export async function createProductHandler(
   req: Request<{}, {}, CreateProductInput["body"]>,
   res: Response
 ) {
-  console.log("hii");
+
   try {
     const userId = res.locals.user._id;
-    console.log(userId);
+
     const body = req.body;
 
     const product = await createProduct({ ...body, user: userId });
 
     return res.send(product);
   } catch (error) {
-    console.log(error);
+
     return res.status(500).send(error);
   }
 }

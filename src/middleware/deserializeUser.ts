@@ -22,12 +22,6 @@ export const deserializeUser = async (
 
   const { expired, decoded } = verifyJwt(accessToken);
 
-  // console.log("refreshToken");
-  // console.log(refreshToken);
-
-  // console.log("expired");
-  // console.log(expired);
-
   if (decoded) {
     res.locals.user = decoded;
     return next();
@@ -44,8 +38,6 @@ export const deserializeUser = async (
 
     res.locals.user = result.decoded;
 
-    // console.log("decoded");
-    // console.log(result.decoded);
     return next();
   }
   return next();

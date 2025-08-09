@@ -1,43 +1,9 @@
 export default {
   port: 3000,
-  dbUri: "mongodb://localhost:27017/test",
+  dbUri: process.env.DB_URL,
   saltFactor: 10,
   accessTokenTtl: "15m",
   refreshTokenTtl: "1y",
-  publicKey: `-----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr7nj69IiapclpJSBKSsr
-ezAsotS4nH67+jn4+IhjkFN3rafIzRuXVKukcF6WzHwNGMwYhVSYDOI0GbcCCeJm
-V5Fi8m1NQu7HPI38O91wycqShnSmYTaCoKZEc6/Tat5AWWcBtSCTX1Fkn0wV9pxX
-dGKqT9G+9z2UjaQueX0AESWS3kcrdfn9mI2hIh5LMPU+x4/eU7nchswHuyJMNpbA
-PzwAv0bD/7YRprN/Z7yy8Bp6WTO4uE0XV7GzAfLC8c3tjoQufWaNkGjD/vYYO2O0
-jOeurbIo6pojocLiLFjPhjtQsgQ4FpO11Q/WoKwMIqyMuDGjbuTDGEtSCG+9EpPr
-vwIDAQAB
------END PUBLIC KEY-----`,
-  privateKey: `-----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEAr7nj69IiapclpJSBKSsrezAsotS4nH67+jn4+IhjkFN3rafI
-zRuXVKukcF6WzHwNGMwYhVSYDOI0GbcCCeJmV5Fi8m1NQu7HPI38O91wycqShnSm
-YTaCoKZEc6/Tat5AWWcBtSCTX1Fkn0wV9pxXdGKqT9G+9z2UjaQueX0AESWS3kcr
-dfn9mI2hIh5LMPU+x4/eU7nchswHuyJMNpbAPzwAv0bD/7YRprN/Z7yy8Bp6WTO4
-uE0XV7GzAfLC8c3tjoQufWaNkGjD/vYYO2O0jOeurbIo6pojocLiLFjPhjtQsgQ4
-FpO11Q/WoKwMIqyMuDGjbuTDGEtSCG+9EpPrvwIDAQABAoIBADD2tfhem/JhXT7H
-llm3Sq1PlhBk/2+zrIMjpijyL/PmHgHIL55fIsKX9QDOimw94JRZQjfcg2WLngLQ
-SIQijmu1+gEczZtp1yAbW/3+TNAdXsiSNk3+F1XWHlqx0lIDzaBboFEs24OCtWvh
-knkdxQyL9XK6OeDASuVQqxZ06xDblVwrBqZrwBexWiMWgh+b8V5YjTun+clG6NK8
-REWuF77R874ZmoX2CGvKkv+90u49jP/OhqN/ebb/X/8h5hysHTikD3YFA5EPXqnv
-llKDz9eFw+jZQK89ryxwuLIaZfmjcS8YHz8NaQC5WlBO2XbaqY25ZkMxJiHq7gGR
-6pasMJECgYEA7h3kGqlTGsoRDn/k5v/wCk2RrDmcAU4w7Qz7PHzePzIN1ViBy6/P
-7agwcEZYF/CfxDIIeTxOIU9wrbdNjp9tEQxj9sGLGAuW+PwEZBxEtVoJDDkIXKdp
-ujdKeN0ncZmYGtyVQP1te+l/Ig5T2s726fzpOt9LJdwt0rX6+0bNovkCgYEAvOx1
-BsUFHTei8e2mrhybmb7QJj00AARufpkqOsdFnOTzQQgtwLurOkXTjxAcMCw1AYci
-olTlP1ERMCeHgkJWZ5uUjz0s5qL9OkL3FVBBb7lfegfNyoRma8TzOr2pK/XXlmqw
-W90uW0FeyIoVxiuZets0Y7rpr5WucLirWDYG+ncCgYEAv8FwlYvwce1yKPQTuXc4
-roNjIYfPOznlqrC+jiqcq9W6UCoTdJ2j2+aLA4+Sl8zeTJhiPIe0/5xCyJKKMaXv
-pkANLIUWZ4nFzcLeImSlbEoSaTZwpnTnbt/h6E1o21HurQsgYxLznUsfZ6SUIOx0
-6WATzqZNlTKn8D0+3iZZqbkCgYBitxsfAmt9rMiTqR3i9EfJug6BLJGzQJ2LwPRz
-6hPRuz/vxxpBDs6VkE7O/hf8g9zeg4HxWHLA9tcIVl9UDN2hHYYuokSH7rpqavs4
-Q8stWast1E4Pd8ccoLiHBPsUYUzY575nAddrD2k7WAuwlK+JpmhlhBD/EjMn6xZ8
-7R4QWQKBgDFDKyllsQwOknvK2Aj/xbeEOxjD16FJJSTN6U+CZk4FY3pjNXHCCast
-/WwOYgCaSZrCEZQyefruXQHcWd/6Yc43Z+rKHwu7Jgd0nejtLFnA4bB2nVCcL9Db
-8LQow2+vYCG1wClBrJAl7+68lpFHeAqB/G3bTwNMSiKyllQWs2Z3
------END RSA PRIVATE KEY-----`,
+  publicKey: process.env.PUBLIC_KEY,
+  privateKey: process.env.PRIVATE_KEY,
 };
